@@ -11,10 +11,10 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
 });
 
-/ Функція створення галереї
 export function createGallery(images) {
   const markup = images
-    .map(image => `
+    .map(
+      image => `
       <li class="gallery-item">
         <a class="gallery-link" href="${image.largeImageURL}">
           <img src="${image.webformatURL}" alt="${image.tags}" />
@@ -26,10 +26,11 @@ export function createGallery(images) {
           </div>
         </a>
       </li>
-    `)
+    `
+    )
     .join('');
 
-  galleryContainer.innerHTML = markup;
+  galleryContainer.insertAdjacentHTML('beforeend', markup);
   lightbox.refresh(); // Обов'язкове оновлення для нових елементів
 }
 

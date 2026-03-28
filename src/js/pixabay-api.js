@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Твій персональний ключ Pixabay
 const API_KEY = '55210973-f163c09f944895a3800208151';
-const BASE_URL = 'https://pixabay.com';
+const BASE_URL = 'https://pixabay.com/api/';
 
 //axios.defaults.baseURL = BASE_URL;
 
